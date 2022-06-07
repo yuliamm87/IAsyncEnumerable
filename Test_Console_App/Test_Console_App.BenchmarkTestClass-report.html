@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Test_Console_App.BenchmarkTestClass-20220607-005100</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19043.1706 (21H1/May2021Update)
+Intel Core i7-10850H CPU 2.70GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=6.0.101
+  [Host]     : .NET 6.0.1 (6.0.121.56705), X64 RyuJIT
+  Job-JPXIGC : .NET 6.0.1 (6.0.121.56705), X64 RyuJIT
+</code></pre>
+<pre><code>EvaluateOverhead=False  MaxIterationCount=3  MinIterationCount=2  
+WarmupCount=0  
+</code></pre>
+
+<table>
+<thead><tr><th>                                 Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>ConsumeIAsyncEnumerableGetDocumentObjects1</td><td>1,050.7 s</td><td>57.93 s</td><td>3.18 s</td><td>7</td><td>3 MB</td>
+</tr><tr><td>ConsumeIAsyncEnumerableGetDocumentObjects5</td><td>395.5 s</td><td>95.10 s</td><td>5.21 s</td><td>6</td><td>3 MB</td>
+</tr><tr><td>ConsumeIAsyncEnumerableGetDocumentObjects10</td><td>311.9 s</td><td>85.34 s</td><td>4.68 s</td><td>5</td><td>3 MB</td>
+</tr><tr><td>ConsumeIAsyncEnumerableGetDocumentObjects20</td><td>274.9 s</td><td>95.75 s</td><td>5.25 s</td><td>4</td><td>3 MB</td>
+</tr><tr><td>ConsumeIAsyncEnumerableGetDocumentObjects50</td><td>245.6 s</td><td>38.79 s</td><td>2.13 s</td><td>3</td><td>3 MB</td>
+</tr><tr><td>ConsumeIAsyncEnumerableGetDocumentObjects100</td><td>238.9 s</td><td>57.32 s</td><td>3.14 s</td><td>2</td><td>3 MB</td>
+</tr><tr><td>ConsumeIAsyncEnumerableGetDocumentObjects200</td><td>230.7 s</td><td>36.88 s</td><td>2.02 s</td><td>1</td><td>3 MB</td>
+</tr><tr><td>ConsumeIAsyncEnumerableGetDocumentObjects300</td><td>232.3 s</td><td>54.67 s</td><td>3.00 s</td><td>1</td><td>3 MB</td>
+</tr><tr><td>ConsumeIAsyncEnumerableGetDocumentObjects1000</td><td>233.1 s</td><td>24.13 s</td><td>1.32 s</td><td>1</td><td>3 MB</td>
+</tr></tbody></table>
+</body>
+</html>
